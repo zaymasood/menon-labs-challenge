@@ -8,7 +8,7 @@ import 'weather-icons/css/weather-icons.css'
 
 
 // api call api.openweathermap.org/data/2.5/weather?q=London,uk&appid=${API_KEY}
-const API_KEY = '3b88b182a6c56ae4706b8e67b9784e57';
+const API_KEY = '';
 
 class App extends React.Component {
   constructor() {
