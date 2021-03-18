@@ -4,11 +4,11 @@ import Weather from './app_component/weather.component';
 import Form from './app_component/form.component';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'weather-icons/css/weather-icons.css'
-// followed tutorial at https://www.youtube.com/watch?v=IxuqmfO6p28 for frontend
+// followed tutorial at https://www.youtube.com/watch?v=IxuqmfO6p28 for project
 
 
 // api call api.openweathermap.org/data/2.5/weather?q=London,uk&appid=${API_KEY}
-const API_KEY = '';
+const API_KEY = '3b88b182a6c56ae4706b8e67b9784e57';
 
 class App extends React.Component {
   constructor() {
@@ -40,6 +40,7 @@ class App extends React.Component {
     return Math.floor(temp - 273.15);
   }
 
+ // function to set respective icons with respect to ranges from openWeatherapi
   getWeatherIcon(icons, rangeID) {
     switch(true) {
       case rangeID >= 200 && rangeID <= 232:
@@ -68,9 +69,9 @@ class App extends React.Component {
     }
   }
 
+// api call to the openweather api to fetch the live data
   getWeather = async (e) => {
     e.preventDefault();
-
     const city = e.target.elements.city.value;
     const country = e.target.elements.country.value;
 
@@ -96,6 +97,7 @@ class App extends React.Component {
     }
   }
 
+// render function to
   render() {
     return(
       <div className="App">
